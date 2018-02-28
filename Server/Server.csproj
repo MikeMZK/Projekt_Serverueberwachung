@@ -46,12 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncTcpServer.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientConnectedEventArgs.cs" />
+    <Compile Include="ClientDisconnectedEventArgs.cs" />
     <Compile Include="frmServer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmServer.Designer.cs">
       <DependentUpon>frmServer.cs</DependentUpon>
     </Compile>
+    <Compile Include="PacketReceivedEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmServer.resx">
