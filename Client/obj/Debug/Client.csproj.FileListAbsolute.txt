@@ -1,0 +1,9 @@
+C:\Users\Mike\Documents\GitHub\Server\Client\bin\Debug\Client.exe.config
+C:\Users\Mike\Documents\GitHub\Server\Client\bin\Debug\Client.exe
+C:\Users\Mike\Documents\GitHub\Server\Client\bin\Debug\Client.pdb
+C:\Users\Mike\Documents\GitHub\Server\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\GitHub\Server\Client\obj\Debug\Client.frmClient.resources
+C:\Users\Mike\Documents\GitHub\Server\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Mike\Documents\GitHub\Server\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Mike\Documents\GitHub\Server\Client\obj\Debug\Client.exe
+C:\Users\Mike\Documents\GitHub\Server\Client\obj\Debug\Client.pdb
