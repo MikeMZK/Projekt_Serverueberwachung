@@ -2,3 +2,4 @@ C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Encrypt\bin\Debug\Enc
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Encrypt\bin\Debug\Encrypt.pdb
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Encrypt\obj\Debug\Encrypt.dll
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Encrypt\obj\Debug\Encrypt.pdb
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Encrypt\obj\Debug\Encrypt.csprojResolveAssemblyReference.cache
