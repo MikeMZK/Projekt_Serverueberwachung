@@ -83,11 +83,11 @@ namespace TCPNetwork
             get { return clients.Count; }
         }
 
-		public bool IsActive
-		{
-			get;
-			private set;
-		}
+        public bool IsActive
+        {
+            get;
+            private set;
+        }
 
 
         #endregion Properties
@@ -103,8 +103,8 @@ namespace TCPNetwork
             tcpListener = new TcpListener(localaddr, port);
             Port = port;
 
-			IsActive = true;
-		}
+            IsActive = true;
+        }
 
         /// <summary>
         /// Konstruktor der IPEndPoint (Kombination aus IP & Port) akzeptiert.
@@ -115,8 +115,8 @@ namespace TCPNetwork
         {
             tcpListener = new TcpListener(localEP);
 
-			IsActive = true;
-		}
+            IsActive = true;
+        }
 
         /// <summary>
         /// Standard-Konstruktor, nicht von außerhalb aufrufbar.
@@ -125,20 +125,20 @@ namespace TCPNetwork
         {
             clients = new List<Client>();
 
-			IsActive = true;
-		}
+            IsActive = true;
+        }
 
-		public void Destroy()
-		{
-			Stop();
+        public void Destroy()
+        {
+            Stop();
 
-			IsActive = false;
-		}
+            IsActive = false;
+        }
 
-		/// <summary>
-		/// Startet den Server.
-		/// </summary>
-		public void Start()
+        /// <summary>
+        /// Startet den Server.
+        /// </summary>
+        public void Start()
         {
             try
             {
@@ -196,6 +196,14 @@ namespace TCPNetwork
                 SendPacket(client.Tcpclient, bytes);
             }
         }
+        public void SendPacket(Packet package)
+        {
+            // Sendet das Paket an jeden Clienten.
+            foreach (Client client in clients)
+            {
+                SendPacket(client.Tcpclient, package.data);
+            }
+        }
 
         /// <summary>
         /// Sendet ein Paket an einen Clienten.
@@ -231,6 +239,35 @@ namespace TCPNetwork
                 throw new Exception("Fehler beim Senden des Paketes.", ex);
             }
         }
+        public void SendPacket(TcpClient tcpClient, Packet package)
+        {
+            try
+            {
+                if (tcpClient != null && tcpClient.Connected)
+                {
+                    // Holt den Stream und beginnt einen asynchronen Schreibvorgang (neuer Thread).
+                    // Es wird "sendCallback" mit dem Client, an den gesendet werden soll, 
+                    // als Parameter "result" uebergeben.
+                    NetworkStream networkStream = tcpClient.GetStream();
+                    networkStream.BeginWrite(package.data, 0, package.data.Length, sendCallback, tcpClient);
+                }
+                else
+                {
+                    // Wenn der Client nicht mehr verbunden war,
+                    // wird er aus der clients-Liste entfernt.
+                    Client client = clients.Find(c => c.Tcpclient == tcpClient);
+                    lock (clients)
+                    {
+                        clients.Remove(client);
+                    }
+                    OnClientDisconnected(new ClientDisconnectedEventArgs(client.Tcpclient));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Fehler beim Senden des Paketes.", ex);
+            }
+        }
 
         #region Callbacks
 
@@ -243,37 +280,37 @@ namespace TCPNetwork
         {
             //try
             //{
-                // Prüfen ob der Server korrekt läuft und nicht beendet wurde (Microsoft-Fehler).
-                if (tcpListener.Server != null && tcpListener.Server.IsBound)
+            // Prüfen ob der Server korrekt läuft und nicht beendet wurde (Microsoft-Fehler).
+            if (tcpListener.Server != null && tcpListener.Server.IsBound)
+            {
+                // Verbindungsversuch vom Clienten abschließen
+                TcpClient tcpClient = tcpListener.EndAcceptTcpClient(result);
+
+                // Puffergrößte für den Clienten setzen.
+                byte[] buffer = new byte[tcpClient.ReceiveBufferSize];
+                Client client = new Client(tcpClient, buffer);
+
+                // clients sperren und Clienten hinzufügen.
+                lock (this.clients)
                 {
-                    // Verbindungsversuch vom Clienten abschließen
-                    TcpClient tcpClient = tcpListener.EndAcceptTcpClient(result);
-
-                    // Puffergrößte für den Clienten setzen.
-                    byte[] buffer = new byte[tcpClient.ReceiveBufferSize];
-                    Client client = new Client(tcpClient, buffer);
-
-                    // clients sperren und Clienten hinzufügen.
-                    lock (this.clients)
-                    {
-                        this.clients.Add(client);
-                    }
-
-                    // Stream von Clienten holen und Lesevorgang für den Clienten starten.
-                    // "readCallback" wird mit dem client in "result" aufgerufen.
-                    NetworkStream networkStream = client.Networkstream;
-                    networkStream.BeginRead(client.Buffer, 0, client.Buffer.Length, readCallback, client);
-
-
-                    // Akzeptieren neuer Clienten starten.
-                    tcpListener.BeginAcceptTcpClient(acceptTcpClientCallback, null);
-                    // ClientConnected Event ausführen.
-                    OnClientConnected(new ClientConnectedEventArgs(tcpClient));
+                    this.clients.Add(client);
                 }
+
+                // Stream von Clienten holen und Lesevorgang für den Clienten starten.
+                // "readCallback" wird mit dem client in "result" aufgerufen.
+                NetworkStream networkStream = client.Networkstream;
+                networkStream.BeginRead(client.Buffer, 0, client.Buffer.Length, readCallback, client);
+
+
+                // Akzeptieren neuer Clienten starten.
+                tcpListener.BeginAcceptTcpClient(acceptTcpClientCallback, null);
+                // ClientConnected Event ausführen.
+                OnClientConnected(new ClientConnectedEventArgs(tcpClient));
+            }
             //}
             //catch (Exception ex)
             //{
-			//	throw new Exception("Fehler beim Verbindungsversuch eines Clienten.", ex);
+            //	throw new Exception("Fehler beim Verbindungsversuch eines Clienten.", ex);
             //}
         }
 

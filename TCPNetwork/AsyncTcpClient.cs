@@ -228,6 +228,22 @@ namespace TCPNetwork
                 throw new Exception("Fehler beim Senden des Paketes.", ex);
             }
         }
+        public void SendPacket(Packet package)
+        {
+            // Wenn der Client nicht verbunden ist kann nichts gesendet werden.
+            if (!TcpClient.Connected)
+                throw new InvalidOperationException();
+            try
+            {
+                // Stream holen und Asynchron das Paket in den Stream schreiben (neuer Thread).
+                NetworkStream networkStream = TcpClient.GetStream();
+                networkStream.BeginWrite(package.data, 0, package.data.Length, sendCallback, null);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Fehler beim Senden des Paketes.", ex);
+            }
+        }
 
         #region Public Callbacks
 
@@ -296,7 +312,7 @@ namespace TCPNetwork
                 // Anzahl der empfangenen Bytes wird in read geschrieben.
                 NetworkStream networkStream = TcpClient.GetStream();
 
-               read = networkStream.EndRead(result);
+                read = networkStream.EndRead(result);
 
                 if (read > 0)
                 {
