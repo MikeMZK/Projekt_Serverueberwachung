@@ -10,3 +10,6 @@ C:\Users\Mike\Documents\GitHub\Server\Server\obj\Debug\Server.pdb
 C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Server\bin\Debug\Server.exe.config
 C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Server\obj\Debug\Server.exe
 C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Server\obj\Debug\Server.pdb
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Server\bin\Debug\Server.exe.config
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Server\obj\Debug\Server.exe
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Server\obj\Debug\Server.pdb
