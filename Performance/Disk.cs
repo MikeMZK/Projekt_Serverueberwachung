@@ -12,9 +12,30 @@ namespace Performance
 {
     public class Disk
     {
+        public string DiskSerialNo { get; private set; }
+        public float DiskSize { get; private set; }
+        public float DiskWorkload { get; private set; }
+        public float DiskWrite { get; private set; }
+        public float DiskRead { get; private set; }
+
+        public Disk()
+        {
+            DiskSerialNo = getDISKserialno();
+            DiskSize = getDISKsize();
+
+            updateValues();
+        }
+        public void updateValues()
+        {
+            DiskWorkload = getDISKworkload();
+            DiskWrite = getDISKwrite();
+            DiskRead = getDISKread();
+        }
+
         public static float getDISKsize()
         {
-
+            throw new NotImplementedException();
+            //ToDo: notimplemented
             return 2;
         }
         public static float getDISKworkload()

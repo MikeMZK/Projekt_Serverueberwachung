@@ -12,11 +12,20 @@ namespace Performance
 {
     public class CPU
     {
-
+        public string CPUname { get; private set; }
+        public float CPUworkload { get; private set; }
+        public List<int> CPUcores { get; private set; }
 
         public CPU()
         {
-            
+            CPUname = getCPUname();
+
+            updateValues();
+        }
+        public void updateValues()
+        {
+            CPUworkload = getCPUworkload();
+            CPUcores = getCPUcores();
         }
 
         public static float getCPUworkload()

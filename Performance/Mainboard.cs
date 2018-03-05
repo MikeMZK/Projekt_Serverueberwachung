@@ -12,6 +12,23 @@ namespace Performance
 {
     public class Mainboard
     {
+        public string MainboardMaker { get; private set; }
+        public string MainboardID { get; private set; }
+        public string BiosMaker { get; private set; }
+        public string BiosSerialNo { get; private set; }
+        public string BiosCaption { get; private set; }
+        public string MacAddress { get; private set; }
+
+        public Mainboard()
+        {
+            MainboardMaker = getMAINBOARDmaker();
+            MainboardID = getMAINBOARDid();
+            BiosMaker = getBIOSmaker();
+            BiosSerialNo = getBIOSserialno();
+            BiosCaption = getBIOScaption();
+            MacAddress = getMACAddress();
+        }
+
         public static string getMAINBOARDmaker()
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_BaseBoard");
@@ -78,7 +95,6 @@ namespace Performance
             }
             return MACAddress;
         }
-        
 
     }
 }

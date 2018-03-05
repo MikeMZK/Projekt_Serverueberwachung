@@ -12,7 +12,18 @@ namespace Performance
 {
     public class OS
     {
+        public string ComputerName { get; private set; }
+        public string AccountName { get; private set; }
+        public string Language { get; private set; }
+        public string OSInformation { get; private set; }
 
+        public OS()
+        {
+            ComputerName = getCOMPUTERname();
+            AccountName = getACCOUNTname();
+            Language = getLANGUAGE();
+            OSInformation = GetOSInformation();
+        }
 
         public static string getCOMPUTERname()
         {

@@ -12,6 +12,20 @@ namespace Performance
 {
     public class RAM
     {
+        public float RAMavailable { get; private set; }
+        public double RAMsize { get; private set; }
+
+        public RAM()
+        {
+            updateValues();
+        }
+        public void updateValues()
+        {
+            RAMavailable = getRAMavailable();
+            RAMsize = getRAMsize();
+        }
+
+
         public static float getRAMavailable()
         {
             PerformanceCounter RAMCounter = new PerformanceCounter();
@@ -34,7 +48,6 @@ namespace Performance
             }
             return Math.Round((res / (1024 * 1024)), 2);
         }
-
 
     }
 }
