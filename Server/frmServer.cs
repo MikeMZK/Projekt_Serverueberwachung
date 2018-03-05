@@ -126,6 +126,8 @@ namespace Server
         {
             Packet.openPackage(e.Packet);
 
+            //server.SendPacket(new Packet("FAILED")); //ToDo: Broadcast an alle bei einem Fehler
+
             Packet tmp = new Packet(CPU.getCPUworkload());
             server.SendPacket(e.Sender, tmp);
 
