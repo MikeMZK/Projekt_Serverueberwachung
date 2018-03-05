@@ -113,7 +113,6 @@ namespace Server
             return false;
         }
 
-
         private void Server_ClientDisconnected(object sender, ClientDisconnectedEventArgs e)
         {
             lblClients.Invoke((MethodInvoker)(() => lblClients.Text = $"Clients connected: {server.NumberOfConnectedClients}"));
@@ -125,9 +124,11 @@ namespace Server
 
         private void Server_PacketReceived(object sender, PacketReceivedEventArgs e)
         {
+            Packet.openPackage(e.Packet);
 
+            Packet tmp = new Packet(CPU.getCPUworkload());
+            server.SendPacket(e.Sender, tmp);
 
-            throw new NotImplementedException();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 using System.Net;
@@ -17,12 +18,17 @@ namespace Client
 {
     public partial class frmClient : Form
     {
+        AsyncTcpClient client;
+        Thread performancetimer;
         IPAddress address;
         int port;
 
         public frmClient()
         {
             InitializeComponent();
+
+            client = new AsyncTcpClient();
+            client.PacketReceived += Client_PacketReceived;
 
             cpbRAM.SendToBack();
             cpbCPU.SendToBack();
@@ -31,6 +37,11 @@ namespace Client
 
             txtIP.Text = Properties.Settings.Default.IP;
             txtPort.Text = Properties.Settings.Default.Port.ToString();
+        }
+
+        private void Client_PacketReceived(object sender, PacketReceivedEventArgs e)
+        {
+            Packet.openPackage(e.Packet);
         }
 
         private bool ValidateAdress()
@@ -61,7 +72,9 @@ namespace Client
         {
             if (!ValidateAdress()) return;
 
+            //Benutzername & Passwort abfragen
 
+            client.Connect(address, port);
         }
 
         private void tpPerformance_Enter(object sender, EventArgs e)
@@ -70,6 +83,11 @@ namespace Client
             cpbNetwork.BringToFront();
             cpbDisk.BringToFront();
             cpbRAM.BringToFront();
+
+            performancetimer = new Thread(generalPerformance);
+            performancetimer.IsBackground = true;
+            performancetimer.Start();
+
         }
         private void tpPerformance_Leave(object sender, EventArgs e)
         {
@@ -77,7 +95,18 @@ namespace Client
             cpbCPU.SendToBack();
             cpbNetwork.SendToBack();
             cpbDisk.SendToBack();
+
         }
+
+        private void generalPerformance()
+        {
+            Packet general = new Packet("general");
+
+            client.SendPacket(general);
+            Thread.Sleep(1000);
+
+        }
+
 
         private void cpbCPU_Click(object sender, EventArgs e)
         {

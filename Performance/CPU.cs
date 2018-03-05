@@ -12,13 +12,11 @@ namespace Performance
 {
     public class CPU
     {
-        public int test;
-        public string tatu;
+
 
         public CPU()
         {
-            test = 100;
-            tatu = "testtatu";
+            
         }
 
         public static float getCPUworkload()

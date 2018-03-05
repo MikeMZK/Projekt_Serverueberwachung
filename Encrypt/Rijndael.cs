@@ -2,6 +2,8 @@
 using System.Security.Cryptography;
 using System.Text;
 
+//Quelle: https://msdn.microsoft.com/de-de/library/system.security.cryptography.rijndael(v=vs.110).aspx
+
 namespace Encrypt
 {
     public static class Rijndael
