@@ -8,6 +8,7 @@ using System.IO;
 using System.Diagnostics;
 using Newtonsoft.Json;
 using Encrypt;
+using Performance;
 
 namespace TCPNetwork
 {
@@ -131,7 +132,7 @@ namespace TCPNetwork
 
             if (package[0] != 255 || package[package.Length - 1] != 255)
             {
-                System.Windows.Forms.MessageBox.Show("Packet fehlerhaft");
+                throw new NotImplementedException();
             }
 
             packetdata = trimMessage(package);
@@ -159,7 +160,7 @@ namespace TCPNetwork
                     Disk diskresult = JsonConvert.DeserializeObject<Disk>(Encoding.ASCII.GetString(packetdata));
                     break;
                 case (byte)DATATYPE.NETWORK:
-                    System.Windows.Forms.MessageBox.Show(new NotImplementedException().ToString());
+                    throw new NotImplementedException();
                     //ToDo: NotImplemented
                     break;
                 case (byte)DATATYPE.RAM:

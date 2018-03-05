@@ -25,3 +25,9 @@ C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Clie
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.frmClient.resources
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.Properties.Resources.resources
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Encrypt.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Performance.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\TCPNetwork.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Encrypt.pdb
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Performance.pdb
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\TCPNetwork.pdb

@@ -1,1 +1,11 @@
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\obj\Debug\TCPNetwork.csprojResolveAssemblyReference.cache
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\bin\Debug\TCPNetwork.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\bin\Debug\TCPNetwork.pdb
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\bin\Debug\Encrypt.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\bin\Debug\Performance.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\bin\Debug\Encrypt.pdb
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\bin\Debug\Performance.pdb
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\obj\Debug\TCPNetwork.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\obj\Debug\TCPNetwork.pdb
