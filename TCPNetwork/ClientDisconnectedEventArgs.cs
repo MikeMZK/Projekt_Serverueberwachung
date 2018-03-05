@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Net.Sockets;
 
-namespace Client
+namespace TCPNetwork
 {
-    public class ClientConnectedEventArgs : EventArgs
+    public class ClientDisconnectedEventArgs : EventArgs
     {
         public TcpClient Client { get; set; }
 
-        public ClientConnectedEventArgs(TcpClient client)
+        public ClientDisconnectedEventArgs(TcpClient client)
         {
             this.Client = client;
         }

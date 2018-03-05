@@ -1,0 +1,1 @@
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\TCPNetwork\obj\Debug\TCPNetwork.csprojResolveAssemblyReference.cache

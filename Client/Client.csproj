@@ -59,17 +59,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsyncTcpClient.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="ClientConnectedEventArgs.cs" />
-    <Compile Include="ClientDisconnectedEventArgs.cs" />
     <Compile Include="frmClient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmClient.Designer.cs">
       <DependentUpon>frmClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="PacketReceivedEventArgs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmClient.resx">
@@ -97,6 +92,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Encrypt\Encrypt.csproj">
+      <Project>{9f095c6c-756d-4a2c-999b-419db01707f1}</Project>
+      <Name>Encrypt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Performance\Performance.csproj">
+      <Project>{69d07856-23de-4dce-92f5-14e15fe6f8a1}</Project>
+      <Name>Performance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TCPNetwork\TCPNetwork.csproj">
+      <Project>{b4a1f20f-0f74-4d49-b1e7-74c36041484e}</Project>
+      <Name>TCPNetwork</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

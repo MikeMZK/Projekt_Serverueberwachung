@@ -13,3 +13,15 @@ C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Clien
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Client.exe.config
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.exe
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.pdb
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Client.exe
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Client.pdb
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\CircularProgressBar.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\WinFormAnimation.dll
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\CircularProgressBar.xml
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\WinFormAnimation.xml
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.frmClient.resources
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.csproj.GenerateResource.Cache

@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 
-namespace Client
+namespace TCPNetwork
 {
     public class AsyncTcpClient
     {

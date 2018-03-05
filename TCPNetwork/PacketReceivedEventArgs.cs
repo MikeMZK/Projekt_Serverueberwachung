@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Sockets;
 
-namespace Client
+namespace TCPNetwork
 {
     public class PacketReceivedEventArgs : EventArgs
     {
