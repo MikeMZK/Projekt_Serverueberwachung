@@ -13,7 +13,7 @@ namespace Performance
     public class Disk
     {
         public string DiskSerialNo { get; private set; }
-        public float DiskSize { get; private set; }
+        //public float DiskSize { get; private set; }
         public float DiskWorkload { get; private set; }
         public float DiskWrite { get; private set; }
         public float DiskRead { get; private set; }
@@ -21,7 +21,7 @@ namespace Performance
         public Disk()
         {
             DiskSerialNo = getDISKserialno();
-            DiskSize = getDISKsize();
+            //DiskSize = getDISKsize();
 
             updateValues();
         }

@@ -28,15 +28,15 @@ namespace Performance
             CPUcores = getCPUcores();
         }
 
-        public static float getCPUworkload()
+        public float getCPUworkload()
         {
             PerformanceCounter CPUCounter = new PerformanceCounter();
+
             CPUCounter.CategoryName = "Prozessor";
             CPUCounter.CounterName = "Prozessorzeit (%)";
             CPUCounter.InstanceName = "_Total";
-
             CPUCounter.NextValue();
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(100);
             return CPUCounter.NextValue();
         }
         public static List<int> getCPUcores()

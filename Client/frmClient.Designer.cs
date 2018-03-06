@@ -73,7 +73,7 @@
             this.cpbCPU.AnimationSpeed = 500;
             this.cpbCPU.BackColor = System.Drawing.Color.Transparent;
             this.cpbCPU.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cpbCPU.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold);
+            this.cpbCPU.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.cpbCPU.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cpbCPU.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cpbCPU.InnerMargin = 2;
@@ -311,7 +311,7 @@
             this.cpbDisk.AnimationSpeed = 500;
             this.cpbDisk.BackColor = System.Drawing.Color.Transparent;
             this.cpbDisk.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cpbDisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold);
+            this.cpbDisk.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.cpbDisk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cpbDisk.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cpbDisk.InnerMargin = 2;
@@ -346,7 +346,7 @@
             this.cpbNetwork.AnimationSpeed = 500;
             this.cpbNetwork.BackColor = System.Drawing.Color.Transparent;
             this.cpbNetwork.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cpbNetwork.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold);
+            this.cpbNetwork.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.cpbNetwork.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cpbNetwork.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cpbNetwork.InnerMargin = 2;
@@ -381,7 +381,7 @@
             this.cpbRAM.AnimationSpeed = 500;
             this.cpbRAM.BackColor = System.Drawing.Color.Transparent;
             this.cpbRAM.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cpbRAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold);
+            this.cpbRAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.cpbRAM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cpbRAM.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cpbRAM.InnerMargin = 2;

@@ -33,7 +33,7 @@ namespace Performance
             RAMCounter.CounterName = "Available MBytes";
 
             RAMCounter.NextValue();
-            System.Threading.Thread.Sleep(1000);
+            System.Threading.Thread.Sleep(100);
             return RAMCounter.NextValue();
         }
         public static double getRAMsize()

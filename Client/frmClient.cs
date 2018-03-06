@@ -74,7 +74,8 @@ namespace Client
                     break;
                 case "RAM":
                     RAM ram = (RAM)obj;
-                    //cpbRAM.Invoke((MethodInvoker)(() => cpbRAM.Value = Convert.ToInt32(ram.RAMavailable)));
+                    cpbRAM.Invoke((MethodInvoker)(() => cpbRAM.Maximum = Convert.ToInt32(ram.RAMsize * 1000)));
+                    cpbRAM.Invoke((MethodInvoker)(() => cpbRAM.Value = Convert.ToInt32(ram.RAMavailable)));
                     break;
                 case "Disk":
                     Disk disk = (Disk)obj;
@@ -159,17 +160,20 @@ namespace Client
             cpbNetwork.SendToBack();
             cpbDisk.SendToBack();
 
-            performancetimer.Suspend();
+            //performancetimer.Suspend();
         }
 
         private void generalPerformance()
         {
-            client.SendPacket(new Packet("getCPU"));
-            //client.SendPacket(new Packet("getRAM"));
-            //client.SendPacket(new Packet("getMB"));
-            //client.SendPacket(new Packet("getDisk"));
+            while (true)
+            {
+                client.SendPacket(new Packet("getCPU"));
+                client.SendPacket(new Packet("getRAM"));
+                client.SendPacket(new Packet("getMB"));
+                client.SendPacket(new Packet("getDisk"));
 
-            Thread.Sleep(1000);
+                Thread.Sleep(1000);
+            }
         }
 
         private void cpbCPU_Click(object sender, EventArgs e)
