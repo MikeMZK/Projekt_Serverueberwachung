@@ -30,6 +30,10 @@ namespace Client
             client = new AsyncTcpClient();
             client.PacketReceived += Client_PacketReceived;
 
+
+            this.Width = 535;
+            this.Height = 230;
+
             cpbRAM.SendToBack();
             cpbCPU.SendToBack();
             cpbNetwork.SendToBack();
@@ -42,6 +46,7 @@ namespace Client
         private void Client_PacketReceived(object sender, PacketReceivedEventArgs e)
         {
             Packet.openPackage(e.Packet);
+
         }
 
         private bool ValidateAdress()
@@ -72,13 +77,31 @@ namespace Client
         {
             if (!ValidateAdress()) return;
 
-            //Benutzername & Passwort abfragen
+            if (txtUsername.Text != "Admin" || txtPassword.Text != "admin") return; //Login Abfrage
+
+            this.Width = 500;
+            this.Height = 250;
+
+            gbLogin.Visible = false;
+            gbProperties.Visible = false;
+            btnLogin.Visible = false;
+            tcMain.Visible = true;
 
             client.Connect(address, port);
+
+            client.SendPacket(new Packet("getInfos"));
         }
 
         private void tpPerformance_Enter(object sender, EventArgs e)
         {
+            this.Width = 810;
+            this.Height = 720;
+
+            cpbCPU.Visible = true;
+            cpbNetwork.Visible = true;
+            cpbDisk.Visible = true;
+            cpbRAM.Visible = true;
+
             cpbCPU.BringToFront();
             cpbNetwork.BringToFront();
             cpbDisk.BringToFront();
@@ -91,6 +114,11 @@ namespace Client
         }
         private void tpPerformance_Leave(object sender, EventArgs e)
         {
+            cpbCPU.Visible = true;
+            cpbNetwork.Visible = true;
+            cpbDisk.Visible = true;
+            cpbRAM.Visible = true;
+
             cpbRAM.SendToBack();
             cpbCPU.SendToBack();
             cpbNetwork.SendToBack();
@@ -106,7 +134,6 @@ namespace Client
             Thread.Sleep(1000);
 
         }
-
 
         private void cpbCPU_Click(object sender, EventArgs e)
         {
@@ -140,5 +167,14 @@ namespace Client
             cpbRAM.BackColor = Color.Transparent;
             cpbCPU.BackColor = Color.Transparent;
         }
+
+        private void tpInformation_Enter(object sender, EventArgs e)
+        {
+
+
+            this.Width = 500;
+            this.Height = 200;
+        }
+
     }
 }
