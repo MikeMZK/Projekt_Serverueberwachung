@@ -3,3 +3,8 @@ C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Performance\bin\Debug
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Performance\obj\Debug\Performance.dll
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Performance\obj\Debug\Performance.pdb
 C:\Users\mikem\Documents\GitHub\Projekt_Serverueberwachung\Performance\obj\Debug\Performance.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Performance\bin\Debug\Performance.dll
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Performance\bin\Debug\Performance.pdb
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Performance\obj\Debug\Performance.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Performance\obj\Debug\Performance.dll
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Performance\obj\Debug\Performance.pdb

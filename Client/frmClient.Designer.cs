@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.cpbCPU = new CircularProgressBar.CircularProgressBar();
-            this.tpSettings = new System.Windows.Forms.TabPage();
             this.btnLogin = new System.Windows.Forms.Button();
             this.gbLogin = new System.Windows.Forms.GroupBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -52,11 +51,19 @@
             this.cpbDisk = new CircularProgressBar.CircularProgressBar();
             this.cpbNetwork = new CircularProgressBar.CircularProgressBar();
             this.cpbRAM = new CircularProgressBar.CircularProgressBar();
-            this.tpSettings.SuspendLayout();
+            this.lblMainboard = new System.Windows.Forms.Label();
+            this.lblBios = new System.Windows.Forms.Label();
+            this.lblMacAddress = new System.Windows.Forms.Label();
+            this.lblOS = new System.Windows.Forms.Label();
+            this.lblAccountName = new System.Windows.Forms.Label();
+            this.lblComputerName = new System.Windows.Forms.Label();
+            this.lblLanguage = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.gbLogin.SuspendLayout();
             this.gbProperties.SuspendLayout();
             this.tpPerformance.SuspendLayout();
             this.tbcPerfMenu.SuspendLayout();
+            this.tpInformation.SuspendLayout();
             this.tcMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,24 +99,12 @@
             this.cpbCPU.Text = "CPU";
             this.cpbCPU.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.cpbCPU.Value = 68;
+            this.cpbCPU.Visible = false;
             this.cpbCPU.Click += new System.EventHandler(this.cpbCPU_Click);
-            // 
-            // tpSettings
-            // 
-            this.tpSettings.Controls.Add(this.btnLogin);
-            this.tpSettings.Controls.Add(this.gbLogin);
-            this.tpSettings.Controls.Add(this.gbProperties);
-            this.tpSettings.Location = new System.Drawing.Point(4, 22);
-            this.tpSettings.Name = "tpSettings";
-            this.tpSettings.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSettings.Size = new System.Drawing.Size(948, 683);
-            this.tpSettings.TabIndex = 2;
-            this.tpSettings.Text = "Settings";
-            this.tpSettings.UseVisualStyleBackColor = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(22, 133);
+            this.btnLogin.Location = new System.Drawing.Point(12, 144);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(174, 27);
             this.btnLogin.TabIndex = 17;
@@ -119,11 +114,12 @@
             // 
             // gbLogin
             // 
+            this.gbLogin.Controls.Add(this.lblInfo);
             this.gbLogin.Controls.Add(this.txtUsername);
             this.gbLogin.Controls.Add(this.txtPassword);
             this.gbLogin.Controls.Add(this.lblPassword);
             this.gbLogin.Controls.Add(this.lblUsername);
-            this.gbLogin.Location = new System.Drawing.Point(22, 22);
+            this.gbLogin.Location = new System.Drawing.Point(19, 33);
             this.gbLogin.Name = "gbLogin";
             this.gbLogin.Size = new System.Drawing.Size(229, 88);
             this.gbLogin.TabIndex = 16;
@@ -169,7 +165,7 @@
             this.gbProperties.Controls.Add(this.txtPort);
             this.gbProperties.Controls.Add(this.lblPort);
             this.gbProperties.Controls.Add(this.lblIP);
-            this.gbProperties.Location = new System.Drawing.Point(290, 22);
+            this.gbProperties.Location = new System.Drawing.Point(280, 33);
             this.gbProperties.Name = "gbProperties";
             this.gbProperties.Size = new System.Drawing.Size(229, 88);
             this.gbProperties.TabIndex = 15;
@@ -214,7 +210,7 @@
             this.tpPerformance.Location = new System.Drawing.Point(4, 22);
             this.tpPerformance.Name = "tpPerformance";
             this.tpPerformance.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPerformance.Size = new System.Drawing.Size(948, 683);
+            this.tpPerformance.Size = new System.Drawing.Size(800, 695);
             this.tpPerformance.TabIndex = 1;
             this.tpPerformance.Text = "Performance";
             this.tpPerformance.UseVisualStyleBackColor = true;
@@ -235,7 +231,7 @@
             this.tbcPerfMenu.Multiline = true;
             this.tbcPerfMenu.Name = "tbcPerfMenu";
             this.tbcPerfMenu.SelectedIndex = 0;
-            this.tbcPerfMenu.Size = new System.Drawing.Size(847, 677);
+            this.tbcPerfMenu.Size = new System.Drawing.Size(847, 689);
             this.tbcPerfMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbcPerfMenu.TabIndex = 0;
             // 
@@ -244,7 +240,7 @@
             this.tabCPU.Location = new System.Drawing.Point(154, 4);
             this.tabCPU.Name = "tabCPU";
             this.tabCPU.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCPU.Size = new System.Drawing.Size(689, 669);
+            this.tabCPU.Size = new System.Drawing.Size(689, 681);
             this.tabCPU.TabIndex = 1;
             this.tabCPU.Text = "CPU";
             this.tabCPU.UseVisualStyleBackColor = true;
@@ -254,7 +250,7 @@
             this.tabDisk.Location = new System.Drawing.Point(154, 4);
             this.tabDisk.Name = "tabDisk";
             this.tabDisk.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisk.Size = new System.Drawing.Size(689, 669);
+            this.tabDisk.Size = new System.Drawing.Size(689, 681);
             this.tabDisk.TabIndex = 2;
             this.tabDisk.Text = "Disk";
             this.tabDisk.UseVisualStyleBackColor = true;
@@ -264,7 +260,7 @@
             this.tabRAM.Location = new System.Drawing.Point(154, 4);
             this.tabRAM.Name = "tabRAM";
             this.tabRAM.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRAM.Size = new System.Drawing.Size(689, 669);
+            this.tabRAM.Size = new System.Drawing.Size(689, 681);
             this.tabRAM.TabIndex = 3;
             this.tabRAM.Text = "RAM";
             this.tabRAM.UseVisualStyleBackColor = true;
@@ -274,31 +270,40 @@
             this.tbNetwork.Location = new System.Drawing.Point(154, 4);
             this.tbNetwork.Name = "tbNetwork";
             this.tbNetwork.Padding = new System.Windows.Forms.Padding(3);
-            this.tbNetwork.Size = new System.Drawing.Size(689, 669);
+            this.tbNetwork.Size = new System.Drawing.Size(689, 681);
             this.tbNetwork.TabIndex = 4;
             this.tbNetwork.Text = "Network";
             this.tbNetwork.UseVisualStyleBackColor = true;
             // 
             // tpInformation
             // 
+            this.tpInformation.Controls.Add(this.lblLanguage);
+            this.tpInformation.Controls.Add(this.lblOS);
+            this.tpInformation.Controls.Add(this.lblAccountName);
+            this.tpInformation.Controls.Add(this.lblComputerName);
+            this.tpInformation.Controls.Add(this.lblMacAddress);
+            this.tpInformation.Controls.Add(this.lblBios);
+            this.tpInformation.Controls.Add(this.lblMainboard);
             this.tpInformation.Location = new System.Drawing.Point(4, 22);
             this.tpInformation.Name = "tpInformation";
             this.tpInformation.Padding = new System.Windows.Forms.Padding(3);
-            this.tpInformation.Size = new System.Drawing.Size(948, 683);
+            this.tpInformation.Size = new System.Drawing.Size(492, 424);
             this.tpInformation.TabIndex = 0;
             this.tpInformation.Text = "Informations";
             this.tpInformation.UseVisualStyleBackColor = true;
+            this.tpInformation.Enter += new System.EventHandler(this.tpInformation_Enter);
             // 
             // tcMain
             // 
             this.tcMain.Controls.Add(this.tpInformation);
             this.tcMain.Controls.Add(this.tpPerformance);
-            this.tcMain.Controls.Add(this.tpSettings);
-            this.tcMain.Location = new System.Drawing.Point(1, 0);
+            this.tcMain.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tcMain.Location = new System.Drawing.Point(0, 0);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(956, 709);
+            this.tcMain.Size = new System.Drawing.Size(500, 450);
             this.tcMain.TabIndex = 2;
+            this.tcMain.Visible = false;
             // 
             // cpbDisk
             // 
@@ -332,6 +337,7 @@
             this.cpbDisk.Text = "Disk";
             this.cpbDisk.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.cpbDisk.Value = 68;
+            this.cpbDisk.Visible = false;
             this.cpbDisk.Click += new System.EventHandler(this.cpbDisk_Click);
             // 
             // cpbNetwork
@@ -366,6 +372,7 @@
             this.cpbNetwork.Text = "Network";
             this.cpbNetwork.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.cpbNetwork.Value = 68;
+            this.cpbNetwork.Visible = false;
             this.cpbNetwork.Click += new System.EventHandler(this.cpbNetwork_Click);
             // 
             // cpbRAM
@@ -400,27 +407,104 @@
             this.cpbRAM.Text = "RAM";
             this.cpbRAM.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.cpbRAM.Value = 68;
+            this.cpbRAM.Visible = false;
             this.cpbRAM.Click += new System.EventHandler(this.cpbRAM_Click);
+            // 
+            // lblMainboard
+            // 
+            this.lblMainboard.AutoSize = true;
+            this.lblMainboard.Location = new System.Drawing.Point(16, 8);
+            this.lblMainboard.Name = "lblMainboard";
+            this.lblMainboard.Size = new System.Drawing.Size(60, 13);
+            this.lblMainboard.TabIndex = 18;
+            this.lblMainboard.Text = "Mainboard:";
+            // 
+            // lblBios
+            // 
+            this.lblBios.AutoSize = true;
+            this.lblBios.Location = new System.Drawing.Point(16, 25);
+            this.lblBios.Name = "lblBios";
+            this.lblBios.Size = new System.Drawing.Size(30, 13);
+            this.lblBios.TabIndex = 19;
+            this.lblBios.Text = "Bios:";
+            // 
+            // lblMacAddress
+            // 
+            this.lblMacAddress.AutoSize = true;
+            this.lblMacAddress.Location = new System.Drawing.Point(16, 43);
+            this.lblMacAddress.Name = "lblMacAddress";
+            this.lblMacAddress.Size = new System.Drawing.Size(69, 13);
+            this.lblMacAddress.TabIndex = 20;
+            this.lblMacAddress.Text = "MacAddress:";
+            // 
+            // lblOS
+            // 
+            this.lblOS.AutoSize = true;
+            this.lblOS.Location = new System.Drawing.Point(16, 95);
+            this.lblOS.Name = "lblOS";
+            this.lblOS.Size = new System.Drawing.Size(28, 13);
+            this.lblOS.TabIndex = 23;
+            this.lblOS.Text = "OS: ";
+            // 
+            // lblAccountName
+            // 
+            this.lblAccountName.AutoSize = true;
+            this.lblAccountName.Location = new System.Drawing.Point(16, 77);
+            this.lblAccountName.Name = "lblAccountName";
+            this.lblAccountName.Size = new System.Drawing.Size(81, 13);
+            this.lblAccountName.TabIndex = 22;
+            this.lblAccountName.Text = "Account Name:";
+            // 
+            // lblComputerName
+            // 
+            this.lblComputerName.AutoSize = true;
+            this.lblComputerName.Location = new System.Drawing.Point(16, 60);
+            this.lblComputerName.Name = "lblComputerName";
+            this.lblComputerName.Size = new System.Drawing.Size(86, 13);
+            this.lblComputerName.TabIndex = 21;
+            this.lblComputerName.Text = "Computer Name:";
+            // 
+            // lblLanguage
+            // 
+            this.lblLanguage.AutoSize = true;
+            this.lblLanguage.Location = new System.Drawing.Point(16, 111);
+            this.lblLanguage.Name = "lblLanguage";
+            this.lblLanguage.Size = new System.Drawing.Size(61, 13);
+            this.lblLanguage.TabIndex = 24;
+            this.lblLanguage.Text = "Language: ";
+            // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Location = new System.Drawing.Point(11, 70);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(188, 13);
+            this.lblInfo.TabIndex = 11;
+            this.lblInfo.Text = "Username: Admin    - Password: admin";
             // 
             // frmClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 709);
+            this.ClientSize = new System.Drawing.Size(607, 450);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.cpbNetwork);
+            this.Controls.Add(this.gbLogin);
             this.Controls.Add(this.cpbDisk);
+            this.Controls.Add(this.gbProperties);
             this.Controls.Add(this.cpbRAM);
             this.Controls.Add(this.tcMain);
             this.Controls.Add(this.cpbCPU);
             this.Name = "frmClient";
             this.Text = "Client";
-            this.tpSettings.ResumeLayout(false);
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
             this.gbProperties.ResumeLayout(false);
             this.gbProperties.PerformLayout();
             this.tpPerformance.ResumeLayout(false);
             this.tbcPerfMenu.ResumeLayout(false);
+            this.tpInformation.ResumeLayout(false);
+            this.tpInformation.PerformLayout();
             this.tcMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -428,7 +512,6 @@
 
         #endregion
         private CircularProgressBar.CircularProgressBar cpbCPU;
-        private System.Windows.Forms.TabPage tpSettings;
         private System.Windows.Forms.TabPage tpPerformance;
         private System.Windows.Forms.TabControl tbcPerfMenu;
         private System.Windows.Forms.TabPage tabCPU;
@@ -451,6 +534,14 @@
         private CircularProgressBar.CircularProgressBar cpbDisk;
         private CircularProgressBar.CircularProgressBar cpbNetwork;
         private CircularProgressBar.CircularProgressBar cpbRAM;
+        private System.Windows.Forms.Label lblOS;
+        private System.Windows.Forms.Label lblAccountName;
+        private System.Windows.Forms.Label lblComputerName;
+        private System.Windows.Forms.Label lblMacAddress;
+        private System.Windows.Forms.Label lblBios;
+        private System.Windows.Forms.Label lblMainboard;
+        private System.Windows.Forms.Label lblLanguage;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
 

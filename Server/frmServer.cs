@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using TCPNetwork;
 using Encrypt;
 using Performance;
@@ -125,12 +126,35 @@ namespace Server
         private void Server_PacketReceived(object sender, PacketReceivedEventArgs e)
         {
             Packet.openPackage(e.Packet);
+            string command = "";
+            Commands(command, e.Sender);
 
             //server.SendPacket(new Packet("FAILED")); //ToDo: Broadcast an alle bei einem Fehler
+        }
 
-            Packet tmp = new Packet(CPU.getCPUworkload());
-            server.SendPacket(e.Sender, tmp);
+        private void Commands(string command, TcpClient sender)
+        {
+            switch (command)
+            {
+                case "getInfos":
+                    server.SendPacket(sender, new Packet(new OS()));
+                    server.SendPacket(sender, new Packet(new Mainboard()));
+                    break;
+                case "getCPU":
+                    server.SendPacket(sender, new Packet(new CPU()));
+                    break;
+                case "getRAM":
+                    server.SendPacket(sender, new Packet(new RAM()));
+                    break;
+                case "getMB":
+                    server.SendPacket(sender, new Packet(new Mainboard()));
+                    break;
+                case "getDisk":
+                    server.SendPacket(sender, new Packet(new Disk()));
+                    break;
+            }
 
         }
+
     }
 }
