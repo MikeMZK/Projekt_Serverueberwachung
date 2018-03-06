@@ -120,14 +120,18 @@ namespace TCPNetwork
 
         private byte[] completePackage()
         {
-            return templst.ToArray();
+            return Rijndael.Encrypt(templst.ToArray());
+            //return templst.ToArray();
         }
 
         #endregion
 
         #region Open package
-        public static void openPackage(byte[] package)
+
+        public static object openPackage(byte[] package)
         {
+            package = Rijndael.Decrypt(package);
+
             byte[] packetdata;
 
             if (package[0] != 255 || package[package.Length - 1] != 255)
@@ -141,36 +145,27 @@ namespace TCPNetwork
             {
                 case (byte)DATATYPE.INT:
                     byte tmp = packetdata[0];
-                    int intresult = Convert.ToInt32(tmp);
-                    break;
+                    return Convert.ToInt32(tmp);
                 case (byte)DATATYPE.DOUBLE:
                     tmp = packetdata[0];
-                    double doubleresult = Convert.ToDouble(tmp);
-                    break;
+                    return Convert.ToDouble(tmp);
                 case (byte)DATATYPE.STRING:
-                    string stringresult = Encoding.ASCII.GetString(packetdata);
-                    break;
+                    return Encoding.ASCII.GetString(packetdata);
                 case (byte)DATATYPE.CPU:
-                    CPU cpuresult = JsonConvert.DeserializeObject<CPU>(Encoding.ASCII.GetString(packetdata));
-                    break;
+                    return JsonConvert.DeserializeObject<CPU>(Encoding.ASCII.GetString(packetdata));
                 case (byte)DATATYPE.OS:
-                    OS osresult = JsonConvert.DeserializeObject<OS>(Encoding.ASCII.GetString(packetdata));
-                    break;
+                    return JsonConvert.DeserializeObject<OS>(Encoding.ASCII.GetString(packetdata));
                 case (byte)DATATYPE.DISK:
-                    Disk diskresult = JsonConvert.DeserializeObject<Disk>(Encoding.ASCII.GetString(packetdata));
-                    break;
+                    return JsonConvert.DeserializeObject<Disk>(Encoding.ASCII.GetString(packetdata));
                 case (byte)DATATYPE.NETWORK:
                     throw new NotImplementedException();
-                    //ToDo: NotImplemented
-                    break;
+                //ToDo: NotImplemented
                 case (byte)DATATYPE.RAM:
-                    RAM ramresult = JsonConvert.DeserializeObject<RAM>(Encoding.ASCII.GetString(packetdata));
-                    break;
+                    return JsonConvert.DeserializeObject<RAM>(Encoding.ASCII.GetString(packetdata));
                 case (byte)DATATYPE.MAINBOARD:
-                    Mainboard mbresult = JsonConvert.DeserializeObject<Mainboard>(Encoding.ASCII.GetString(packetdata));
-                    break;
+                    return JsonConvert.DeserializeObject<Mainboard>(Encoding.ASCII.GetString(packetdata));
             }
-
+            return null;
         }
 
         #endregion

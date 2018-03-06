@@ -45,7 +45,25 @@ namespace Client
 
         private void Client_PacketReceived(object sender, PacketReceivedEventArgs e)
         {
-            Packet.openPackage(e.Packet);
+            var obj = Packet.openPackage(e.Packet);
+
+            switch (obj.GetType().Name)
+            {
+                case "OS":
+                    OS os = (OS)obj;
+                    lblComputerName.Invoke((MethodInvoker)(() => lblComputerName.Text = $"Computer Name: {os.ComputerName}"));
+                    lblAccountName.Invoke((MethodInvoker)(() => lblAccountName.Text = $"Account Name: {os.AccountName}"));
+                    lblLanguage.Invoke((MethodInvoker)(() => lblLanguage.Text = $"Language: {os.Language}"));
+                    lblOS.Invoke((MethodInvoker)(() => lblOS.Text = $"OS: {os.OSInformation}"));
+                    break;
+                case "Mainboard":
+                    Mainboard mb = (Mainboard)obj;
+                    lblMainboard.Invoke((MethodInvoker)(() => lblMainboard.Text = $"Mainboard: {mb.MainboardMaker} {mb.MainboardID}"));
+                    lblBios.Invoke((MethodInvoker)(() => lblBios.Text = $"Bios: {mb.BiosMaker} {mb.BiosCaption} {mb.BiosSerialNo}"));
+                    lblMacAddress.Invoke((MethodInvoker)(() => lblMacAddress.Text = $"MacAddress: {mb.MacAddress}"));
+                    break;
+            }
+            //if (package == "FAILED") MessageBox.Show("Server overloaded");     //Broadcast meldung bei einem Fehler
 
         }
 

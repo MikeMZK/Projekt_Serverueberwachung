@@ -125,9 +125,8 @@ namespace Server
 
         private void Server_PacketReceived(object sender, PacketReceivedEventArgs e)
         {
-            Packet.openPackage(e.Packet);
-            string command = "";
-            Commands(command, e.Sender);
+            var command = Packet.openPackage(e.Packet);
+            Commands((string)command, e.Sender);
 
             //server.SendPacket(new Packet("FAILED")); //ToDo: Broadcast an alle bei einem Fehler
         }
