@@ -34,7 +34,7 @@ namespace Performance
 
         public static float getDISKsize()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
             //ToDo: notimplemented
             return 2;
         }

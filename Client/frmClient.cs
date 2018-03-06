@@ -46,7 +46,13 @@ namespace Client
         private void Client_PacketReceived(object sender, PacketReceivedEventArgs e)
         {
             var obj = Packet.openPackage(e.Packet);
+            useObj(obj);
+            //if (package == "FAILED") MessageBox.Show("Server overloaded");     //Broadcast meldung bei einem Fehler
 
+        }
+
+        private void useObj(object obj)
+        {
             switch (obj.GetType().Name)
             {
                 case "OS":
@@ -62,8 +68,19 @@ namespace Client
                     lblBios.Invoke((MethodInvoker)(() => lblBios.Text = $"Bios: {mb.BiosMaker} {mb.BiosCaption} {mb.BiosSerialNo}"));
                     lblMacAddress.Invoke((MethodInvoker)(() => lblMacAddress.Text = $"MacAddress: {mb.MacAddress}"));
                     break;
+                case "CPU":
+                    CPU cpu = (CPU)obj;
+                    cpbCPU.Invoke((MethodInvoker)(() => cpbCPU.Value = Convert.ToInt32(cpu.CPUworkload)));
+                    break;
+                case "RAM":
+                    RAM ram = (RAM)obj;
+                    //cpbRAM.Invoke((MethodInvoker)(() => cpbRAM.Value = Convert.ToInt32(ram.RAMavailable)));
+                    break;
+                case "Disk":
+                    Disk disk = (Disk)obj;
+                    cpbDisk.Invoke((MethodInvoker)(() => cpbDisk.Value = Convert.ToInt32(disk.DiskWorkload)));
+                    break;
             }
-            //if (package == "FAILED") MessageBox.Show("Server overloaded");     //Broadcast meldung bei einem Fehler
 
         }
 
@@ -142,15 +159,17 @@ namespace Client
             cpbNetwork.SendToBack();
             cpbDisk.SendToBack();
 
+            performancetimer.Suspend();
         }
 
         private void generalPerformance()
         {
-            Packet general = new Packet("general");
+            client.SendPacket(new Packet("getCPU"));
+            //client.SendPacket(new Packet("getRAM"));
+            //client.SendPacket(new Packet("getMB"));
+            //client.SendPacket(new Packet("getDisk"));
 
-            client.SendPacket(general);
             Thread.Sleep(1000);
-
         }
 
         private void cpbCPU_Click(object sender, EventArgs e)

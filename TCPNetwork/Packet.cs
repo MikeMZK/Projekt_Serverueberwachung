@@ -182,7 +182,7 @@ namespace TCPNetwork
             {
                 datas.Add(packet[i]);
             }
-            for (i = i + 2; packet[i] != ENDHASH; i++)
+            for (i += 2; packet[i] != ENDHASH; i++)
             {
                 hashwert.Add(packet[i]);
             }
