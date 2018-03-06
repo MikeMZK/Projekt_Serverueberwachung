@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using TCPNetwork;
@@ -13,6 +14,9 @@ namespace Client
 {
     public partial class frmClient : Form
     {
+        TimeChart CPUwork, RAMav, DiskWorkload, DiskR, DiskW;
+        List<TimeChart> CPUcores;
+
         AsyncTcpClient client;
         Thread performancetimer;
         IPAddress address;
@@ -25,6 +29,11 @@ namespace Client
             client = new AsyncTcpClient();
             client.PacketReceived += Client_PacketReceived;
 
+            CPUwork = new TimeChart(ctCPU, "CPU", 20);
+            RAMav = new TimeChart(ctRAM, "RAM available", 20);
+            DiskWorkload = new TimeChart(ctDiskWork, "Disk Workload", 20);
+            DiskR = new TimeChart(ctDiskR, "Read", 20);
+            DiskW = new TimeChart(ctDiskW, "Write", 20);
 
             this.Width = 535;
             this.Height = 230;
@@ -66,15 +75,22 @@ namespace Client
                 case "CPU":
                     CPU cpu = (CPU)obj;
                     cpbCPU.Invoke((MethodInvoker)(() => cpbCPU.Value = Convert.ToInt32(cpu.CPUworkload)));
+                    cpbCPU.Invoke((MethodInvoker)(() => CPUwork.AddValue(cpu.CPUworkload)));
+
+
                     break;
                 case "RAM":
                     RAM ram = (RAM)obj;
                     cpbRAM.Invoke((MethodInvoker)(() => cpbRAM.Maximum = Convert.ToInt32(ram.RAMsize * 1000)));
                     cpbRAM.Invoke((MethodInvoker)(() => cpbRAM.Value = Convert.ToInt32(ram.RAMavailable)));
+                    cpbRAM.Invoke((MethodInvoker)(() => RAMav.AddValue((100 / (ram.RAMsize * 1000)) * ram.RAMavailable)));
                     break;
                 case "Disk":
                     Disk disk = (Disk)obj;
                     cpbDisk.Invoke((MethodInvoker)(() => cpbDisk.Value = Convert.ToInt32(disk.DiskWorkload)));
+                    cpbDisk.Invoke((MethodInvoker)(() => DiskR.AddValue(disk.DiskRead)));
+                    cpbDisk.Invoke((MethodInvoker)(() => DiskW.AddValue(disk.DiskWrite)));
+                    cpbDisk.Invoke((MethodInvoker)(() => DiskWorkload.AddValue(disk.DiskWorkload)));
                     break;
             }
 

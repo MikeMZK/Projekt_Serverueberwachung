@@ -28,30 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.cpbCPU = new CircularProgressBar.CircularProgressBar();
             this.btnLogin = new System.Windows.Forms.Button();
             this.gbLogin = new System.Windows.Forms.GroupBox();
@@ -68,8 +62,13 @@
             this.tpPerformance = new System.Windows.Forms.TabPage();
             this.tbcPerfMenu = new System.Windows.Forms.TabControl();
             this.tabCPU = new System.Windows.Forms.TabPage();
+            this.ctCores = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ctCPU = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabDisk = new System.Windows.Forms.TabPage();
+            this.ctDiskR = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ctDiskWork = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabRAM = new System.Windows.Forms.TabPage();
+            this.ctRAM = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tbNetwork = new System.Windows.Forms.TabPage();
             this.tpInformation = new System.Windows.Forms.TabPage();
             this.lblLanguage = new System.Windows.Forms.Label();
@@ -83,31 +82,22 @@
             this.cpbDisk = new CircularProgressBar.CircularProgressBar();
             this.cpbNetwork = new CircularProgressBar.CircularProgressBar();
             this.cpbRAM = new CircularProgressBar.CircularProgressBar();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ctCore2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ctCore3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ctCore4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart7 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart8 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ctDiskW = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gbLogin.SuspendLayout();
             this.gbProperties.SuspendLayout();
             this.tpPerformance.SuspendLayout();
             this.tbcPerfMenu.SuspendLayout();
             this.tabCPU.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ctCores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctCPU)).BeginInit();
             this.tabDisk.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ctDiskR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctDiskWork)).BeginInit();
             this.tabRAM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ctRAM)).BeginInit();
             this.tpInformation.SuspendLayout();
             this.tcMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctCore2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctCore3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctCore4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctDiskW)).BeginInit();
             this.SuspendLayout();
             // 
             // cpbCPU
@@ -262,7 +252,7 @@
             this.tpPerformance.Location = new System.Drawing.Point(4, 22);
             this.tpPerformance.Name = "tpPerformance";
             this.tpPerformance.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPerformance.Size = new System.Drawing.Size(781, 462);
+            this.tpPerformance.Size = new System.Drawing.Size(781, 436);
             this.tpPerformance.TabIndex = 1;
             this.tpPerformance.Text = "Performance";
             this.tpPerformance.UseVisualStyleBackColor = true;
@@ -283,54 +273,137 @@
             this.tbcPerfMenu.Multiline = true;
             this.tbcPerfMenu.Name = "tbcPerfMenu";
             this.tbcPerfMenu.SelectedIndex = 0;
-            this.tbcPerfMenu.Size = new System.Drawing.Size(775, 456);
+            this.tbcPerfMenu.Size = new System.Drawing.Size(775, 430);
             this.tbcPerfMenu.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tbcPerfMenu.TabIndex = 0;
             // 
             // tabCPU
             // 
-            this.tabCPU.Controls.Add(this.ctCore4);
-            this.tabCPU.Controls.Add(this.ctCore3);
-            this.tabCPU.Controls.Add(this.ctCore2);
-            this.tabCPU.Controls.Add(this.chart1);
+            this.tabCPU.Controls.Add(this.ctCores);
+            this.tabCPU.Controls.Add(this.ctCPU);
             this.tabCPU.Location = new System.Drawing.Point(304, 4);
             this.tabCPU.Name = "tabCPU";
             this.tabCPU.Padding = new System.Windows.Forms.Padding(3);
-            this.tabCPU.Size = new System.Drawing.Size(467, 448);
+            this.tabCPU.Size = new System.Drawing.Size(467, 422);
             this.tabCPU.TabIndex = 1;
             this.tabCPU.Text = "CPU";
             this.tabCPU.UseVisualStyleBackColor = true;
             // 
+            // ctCores
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.ctCores.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ctCores.Legends.Add(legend1);
+            this.ctCores.Location = new System.Drawing.Point(12, 132);
+            this.ctCores.Name = "ctCores";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ctCores.Series.Add(series1);
+            this.ctCores.Size = new System.Drawing.Size(452, 120);
+            this.ctCores.TabIndex = 1;
+            this.ctCores.Text = "Cores";
+            // 
+            // ctCPU
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.ctCPU.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ctCPU.Legends.Add(legend2);
+            this.ctCPU.Location = new System.Drawing.Point(12, 6);
+            this.ctCPU.Name = "ctCPU";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "CPU";
+            this.ctCPU.Series.Add(series2);
+            this.ctCPU.Size = new System.Drawing.Size(452, 120);
+            this.ctCPU.TabIndex = 0;
+            this.ctCPU.Text = "CPU";
+            // 
             // tabDisk
             // 
-            this.tabDisk.Controls.Add(this.chart7);
-            this.tabDisk.Controls.Add(this.chart6);
-            this.tabDisk.Controls.Add(this.chart5);
+            this.tabDisk.Controls.Add(this.ctDiskW);
+            this.tabDisk.Controls.Add(this.ctDiskR);
+            this.tabDisk.Controls.Add(this.ctDiskWork);
             this.tabDisk.Location = new System.Drawing.Point(304, 4);
             this.tabDisk.Name = "tabDisk";
             this.tabDisk.Padding = new System.Windows.Forms.Padding(3);
-            this.tabDisk.Size = new System.Drawing.Size(467, 448);
+            this.tabDisk.Size = new System.Drawing.Size(467, 422);
             this.tabDisk.TabIndex = 2;
             this.tabDisk.Text = "Disk";
             this.tabDisk.UseVisualStyleBackColor = true;
             // 
+            // ctDiskR
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.ctDiskR.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.ctDiskR.Legends.Add(legend4);
+            this.ctDiskR.Location = new System.Drawing.Point(0, 166);
+            this.ctDiskR.Name = "ctDiskR";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.ctDiskR.Series.Add(series4);
+            this.ctDiskR.Size = new System.Drawing.Size(468, 162);
+            this.ctDiskR.TabIndex = 1;
+            this.ctDiskR.Text = "ctDiskRead";
+            // 
+            // ctDiskWork
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.ctDiskWork.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.ctDiskWork.Legends.Add(legend5);
+            this.ctDiskWork.Location = new System.Drawing.Point(0, 0);
+            this.ctDiskWork.Name = "ctDiskWork";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.ctDiskWork.Series.Add(series5);
+            this.ctDiskWork.Size = new System.Drawing.Size(468, 162);
+            this.ctDiskWork.TabIndex = 0;
+            this.ctDiskWork.Text = "ctDiskWorkload";
+            // 
             // tabRAM
             // 
-            this.tabRAM.Controls.Add(this.chart8);
+            this.tabRAM.Controls.Add(this.ctRAM);
             this.tabRAM.Location = new System.Drawing.Point(304, 4);
             this.tabRAM.Name = "tabRAM";
             this.tabRAM.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRAM.Size = new System.Drawing.Size(467, 448);
+            this.tabRAM.Size = new System.Drawing.Size(467, 422);
             this.tabRAM.TabIndex = 3;
             this.tabRAM.Text = "RAM";
             this.tabRAM.UseVisualStyleBackColor = true;
             // 
+            // ctRAM
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.ctRAM.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.ctRAM.Legends.Add(legend6);
+            this.ctRAM.Location = new System.Drawing.Point(4, 3);
+            this.ctRAM.Name = "ctRAM";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.ctRAM.Series.Add(series6);
+            this.ctRAM.Size = new System.Drawing.Size(458, 202);
+            this.ctRAM.TabIndex = 0;
+            this.ctRAM.Text = "RAM ";
+            // 
             // tbNetwork
             // 
-            this.tbNetwork.Location = new System.Drawing.Point(154, 4);
+            this.tbNetwork.Location = new System.Drawing.Point(304, 4);
             this.tbNetwork.Name = "tbNetwork";
             this.tbNetwork.Padding = new System.Windows.Forms.Padding(3);
-            this.tbNetwork.Size = new System.Drawing.Size(689, 681);
+            this.tbNetwork.Size = new System.Drawing.Size(467, 422);
             this.tbNetwork.TabIndex = 4;
             this.tbNetwork.Text = "Network";
             this.tbNetwork.UseVisualStyleBackColor = true;
@@ -347,7 +420,7 @@
             this.tpInformation.Location = new System.Drawing.Point(4, 22);
             this.tpInformation.Name = "tpInformation";
             this.tpInformation.Padding = new System.Windows.Forms.Padding(3);
-            this.tpInformation.Size = new System.Drawing.Size(492, 424);
+            this.tpInformation.Size = new System.Drawing.Size(781, 436);
             this.tpInformation.TabIndex = 0;
             this.tpInformation.Text = "Informations";
             this.tpInformation.UseVisualStyleBackColor = true;
@@ -424,7 +497,7 @@
             this.tcMain.Location = new System.Drawing.Point(0, 0);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(789, 488);
+            this.tcMain.Size = new System.Drawing.Size(789, 462);
             this.tcMain.TabIndex = 2;
             this.tcMain.Visible = false;
             // 
@@ -533,139 +606,28 @@
             this.cpbRAM.Visible = false;
             this.cpbRAM.Click += new System.EventHandler(this.cpbRAM_Click);
             // 
-            // chart1
-            // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
-            this.chart1.Location = new System.Drawing.Point(12, 6);
-            this.chart1.Name = "chart1";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart1.Series.Add(series4);
-            this.chart1.Size = new System.Drawing.Size(452, 120);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "ctCore1";
-            // 
-            // ctCore2
+            // ctDiskW
             // 
             chartArea3.Name = "ChartArea1";
-            this.ctCore2.ChartAreas.Add(chartArea3);
+            this.ctDiskW.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
-            this.ctCore2.Legends.Add(legend3);
-            this.ctCore2.Location = new System.Drawing.Point(12, 132);
-            this.ctCore2.Name = "ctCore2";
+            this.ctDiskW.Legends.Add(legend3);
+            this.ctDiskW.Location = new System.Drawing.Point(1, 324);
+            this.ctDiskW.Name = "ctDiskW";
             series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series3.Legend = "Legend1";
             series3.Name = "Series1";
-            this.ctCore2.Series.Add(series3);
-            this.ctCore2.Size = new System.Drawing.Size(452, 120);
-            this.ctCore2.TabIndex = 1;
-            this.ctCore2.Text = "ctCore2";
-            // 
-            // ctCore3
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.ctCore3.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.ctCore3.Legends.Add(legend2);
-            this.ctCore3.Location = new System.Drawing.Point(9, 258);
-            this.ctCore3.Name = "ctCore3";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.ctCore3.Series.Add(series2);
-            this.ctCore3.Size = new System.Drawing.Size(452, 120);
-            this.ctCore3.TabIndex = 2;
-            this.ctCore3.Text = "ctCore3";
-            // 
-            // ctCore4
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.ctCore4.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ctCore4.Legends.Add(legend1);
-            this.ctCore4.Location = new System.Drawing.Point(12, 374);
-            this.ctCore4.Name = "ctCore4";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ctCore4.Series.Add(series1);
-            this.ctCore4.Size = new System.Drawing.Size(452, 120);
-            this.ctCore4.TabIndex = 3;
-            this.ctCore4.Text = "ctCore4";
-            // 
-            // chart5
-            // 
-            chartArea7.Name = "ChartArea1";
-            this.chart5.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart5.Legends.Add(legend7);
-            this.chart5.Location = new System.Drawing.Point(0, 0);
-            this.chart5.Name = "chart5";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Series1";
-            this.chart5.Series.Add(series7);
-            this.chart5.Size = new System.Drawing.Size(468, 162);
-            this.chart5.TabIndex = 0;
-            this.chart5.Text = "ctDiskWorkload";
-            // 
-            // chart6
-            // 
-            chartArea6.Name = "ChartArea1";
-            this.chart6.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart6.Legends.Add(legend6);
-            this.chart6.Location = new System.Drawing.Point(0, 166);
-            this.chart6.Name = "chart6";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart6.Series.Add(series6);
-            this.chart6.Size = new System.Drawing.Size(468, 162);
-            this.chart6.TabIndex = 1;
-            this.chart6.Text = "ctDiskRead";
-            // 
-            // chart7
-            // 
-            chartArea5.Name = "ChartArea1";
-            this.chart7.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart7.Legends.Add(legend5);
-            this.chart7.Location = new System.Drawing.Point(2, 331);
-            this.chart7.Name = "chart7";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chart7.Series.Add(series5);
-            this.chart7.Size = new System.Drawing.Size(468, 162);
-            this.chart7.TabIndex = 2;
-            this.chart7.Text = "ctDiskWrite";
-            // 
-            // chart8
-            // 
-            chartArea8.Name = "ChartArea1";
-            this.chart8.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart8.Legends.Add(legend8);
-            this.chart8.Location = new System.Drawing.Point(4, 3);
-            this.chart8.Name = "chart8";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chart8.Series.Add(series8);
-            this.chart8.Size = new System.Drawing.Size(458, 202);
-            this.chart8.TabIndex = 0;
-            this.chart8.Text = "chartRAMavail";
+            this.ctDiskW.Series.Add(series3);
+            this.ctDiskW.Size = new System.Drawing.Size(468, 162);
+            this.ctDiskW.TabIndex = 2;
+            this.ctDiskW.Text = "Write";
             // 
             // frmClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 488);
+            this.ClientSize = new System.Drawing.Size(789, 462);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.cpbNetwork);
             this.Controls.Add(this.gbLogin);
@@ -683,19 +645,17 @@
             this.tpPerformance.ResumeLayout(false);
             this.tbcPerfMenu.ResumeLayout(false);
             this.tabCPU.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ctCores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctCPU)).EndInit();
             this.tabDisk.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ctDiskR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctDiskWork)).EndInit();
             this.tabRAM.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ctRAM)).EndInit();
             this.tpInformation.ResumeLayout(false);
             this.tpInformation.PerformLayout();
             this.tcMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctCore2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctCore3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ctCore4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ctDiskW)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -732,14 +692,12 @@
         private System.Windows.Forms.Label lblMainboard;
         private System.Windows.Forms.Label lblLanguage;
         private System.Windows.Forms.Label lblInfo;
-        private System.Windows.Forms.DataVisualization.Charting.Chart ctCore4;
-        private System.Windows.Forms.DataVisualization.Charting.Chart ctCore3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart ctCore2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart7;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart8;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctCores;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctCPU;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctDiskR;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctDiskWork;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctRAM;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ctDiskW;
     }
 }
 
