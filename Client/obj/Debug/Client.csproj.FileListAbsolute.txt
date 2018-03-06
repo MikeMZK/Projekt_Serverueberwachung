@@ -49,3 +49,5 @@ C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Clien
 C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.frmClient.resources
 C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.Properties.Resources.resources
 C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Diagramm.dll
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Client\bin\Debug\Diagramm.pdb

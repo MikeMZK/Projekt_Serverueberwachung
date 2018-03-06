@@ -13,12 +13,15 @@ using System.Net.Sockets;
 using TCPNetwork;
 using Encrypt;
 using Performance;
+using Log;
 
 namespace Server
 {
     public partial class frmServer : Form
     {
         AsyncTcpServer server;
+        LogWrite clientlog = new LogWrite();
+        LogWrite networklog = new LogWrite();
 
         public frmServer()
         {
@@ -117,10 +120,12 @@ namespace Server
         private void Server_ClientDisconnected(object sender, ClientDisconnectedEventArgs e)
         {
             lblClients.Invoke((MethodInvoker)(() => lblClients.Text = $"Clients connected: {server.NumberOfConnectedClients}"));
+            this.Invoke((MethodInvoker)(() => clientlog.TxtClients($"Disconnected: {e.Client.ToString()}")));
         }
         private void Server_ClientConnected(object sender, ClientConnectedEventArgs e)
         {
             lblClients.Invoke((MethodInvoker)(() => lblClients.Text = $"Clients connected: {server.NumberOfConnectedClients}"));
+            this.Invoke((MethodInvoker)(() => clientlog.TxtClients($"Connected: {e.Client.ToString()}")));
         }
 
         private void Server_PacketReceived(object sender, PacketReceivedEventArgs e)

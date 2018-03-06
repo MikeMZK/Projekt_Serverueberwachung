@@ -1,0 +1,5 @@
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Diagramm\bin\Debug\Diagramm.dll
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Diagramm\bin\Debug\Diagramm.pdb
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Diagramm\obj\Debug\Diagramm.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Diagramm\obj\Debug\Diagramm.dll
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Diagramm\obj\Debug\Diagramm.pdb

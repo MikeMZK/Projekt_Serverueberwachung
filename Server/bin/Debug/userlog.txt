@@ -1,0 +1,2 @@
+﻿06.03.2018 12:23:48//  Connected: System.Net.Sockets.TcpClient
+06.03.2018 12:26:12//  Disconnected: System.Net.Sockets.TcpClient06.03.2018 12:25:56//  Connected: System.Net.Sockets.TcpClient

@@ -44,6 +44,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -94,6 +95,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Diagramm\Diagramm.csproj">
+      <Project>{0782a9a4-6c7d-4ce1-958c-4161cb281e86}</Project>
+      <Name>Diagramm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Encrypt\Encrypt.csproj">
       <Project>{9f095c6c-756d-4a2c-999b-419db01707f1}</Project>
       <Name>Encrypt</Name>

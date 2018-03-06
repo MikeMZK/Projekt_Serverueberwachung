@@ -98,6 +98,10 @@
       <Project>{9f095c6c-756d-4a2c-999b-419db01707f1}</Project>
       <Name>Encrypt</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Log\Log.csproj">
+      <Project>{07079245-e6d3-42fa-a453-b2eebc7d53a8}</Project>
+      <Name>Log</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Performance\Performance.csproj">
       <Project>{69d07856-23de-4dce-92f5-14e15fe6f8a1}</Project>
       <Name>Performance</Name>

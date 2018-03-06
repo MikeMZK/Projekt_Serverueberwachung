@@ -1,0 +1,5 @@
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Log\bin\Debug\Log.dll
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Log\bin\Debug\Log.pdb
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Log\obj\Debug\Log.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Log\obj\Debug\Log.dll
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Log\obj\Debug\Log.pdb

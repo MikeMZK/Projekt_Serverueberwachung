@@ -49,3 +49,5 @@ C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Server\obj\Debug\Serve
 C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Server\obj\Debug\Server.frmServer.resources
 C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Server\obj\Debug\Server.Properties.Resources.resources
 C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Server\bin\Debug\Log.dll
+C:\Users\Mike\Documents\GitHub\Projekt_Serverueberwachung\Server\bin\Debug\Log.pdb
